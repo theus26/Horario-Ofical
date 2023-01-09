@@ -1,24 +1,9 @@
-# relogio-ntp
+## Pagina Estatica Para mostrar as Horas em tempo real.
 
-## Project setup
-```
-npm install
-```
+> Esse site foi feito se baseando no site do horário oficial de brasília, com o intuito de aprender e praticar conhecimentos em JavaScript, Utilizando o Framework Vue.JS.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+>É um site estático com informações pertinentes ao usuario.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+>> Foi feito tanto para Web, quanto pode ser visto pelos celulares, totalmente responsivo e se adapta a maioria das telas.
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
