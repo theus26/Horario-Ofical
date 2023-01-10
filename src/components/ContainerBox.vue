@@ -21,7 +21,7 @@
       flex-direction: column;
       background-color: white;
       padding: 3rem;
-      border-color: #d3d3d3;
+      border-color: #00BFFF;
       border-width: 5px 0.5px 5px 0.5px;
       border-style: solid;
       border-radius: 25px 25px 25px 25px;

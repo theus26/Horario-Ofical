@@ -6,9 +6,8 @@
         <header>
           <div class="container-text">
             <h1>Horário Oficial de Brasília</h1>
-            <p class="text">Acerte seu relógio com o horário de Brasília, a hora oficial do Brasil</p>
           </div>
-          <hr>
+          <hr />
         </header>
         <nav>
           <div class="container-text">
@@ -16,54 +15,54 @@
           </div>
         </nav>
         <nav>
-          <div class="container-wrap">
-            <div class="container-Hours">
-              <p class="text-hours" id="clock">{{ hours }}</p>
+          <div class="animated-border"></div>
+          <div class="corner">
+            <div class="container-wrap">
+              <div class="container-Hours">
+                <p class="text-hours" id="clock">{{ hours }}</p>
+              </div>
             </div>
           </div>
         </nav>
         <div class="container-text">
-          <p class="text">A hora certa é sincronizada automaticamente. Não é necessário recarregar a página.</p>
-          <br>
-          <br>
-          <hr>
+          <p class="text">
+            Hora sincronizada com servidores de horário do observatorio Nacional-RJ
+          </p>
+          <br />
+          <br />
+          <hr />
         </div>
         <div class="container-text">
-          <span class="text">Faça uma DOAÇÃO via PIX de qualquer valor e ajude a manter este site livre de anúncios
-            irritantes. O
-            site
-            da hora certa necessita de servidores com alta capacidade de processamento para que não ocorra sobrecarga no
-            sistema.</span>
-          <p class="text"> Chave PIX: <b>doe@itech.win</b> </p>
+          <span class="text">Ajude a manter esse site sempre no ar. Faça-nos uma doação de qualquer valor. Muito
+            obrigado.</span>
+          <p class="text">Chave PIX: <b>doe@itech.win</b></p>
         </div>
         <div class="container-text">
           (<router-link to="/qrCode">Doe via Qr Code</router-link>)
-          <br>
-          <br>
-          <hr>
+          <br />
+          <br />
+          <hr />
         </div>
         <footer>
           <div class="container-text">
-            <img src="../assets/brasil.png" width="15" height="10" alt="Bandeira do Brasil" title="Bandeira do Brasil">
-            Brasil (UTC-3) - Horario de Brasília, a hora oficial do Brasil <li>{{ dayComplete }}</li>
-            ©️ Alisson 2023
-
-
-
+            <div class="container-footer">
+              <img src="../assets/brasil.png" width="15" height="10" alt="Bandeira do Brasil"
+                title="Bandeira do Brasil" />
+              Brasil (UTC-3)
+              {{ dayComplete }}
+            </div>
+            ©️ Relogio.cc
           </div>
         </footer>
-
       </ContainerBox>
     </main>
   </body>
-
 </template>
 
 <script>
 // @ is an alias to /src
 
 import ContainerBox from "@/components/ContainerBox.vue";
-
 
 export default {
   name: "HomeView",
@@ -72,57 +71,75 @@ export default {
   },
   data() {
     return {
-      dayComplete: '',
-      hours: ''
-
-    }
+      dayComplete: "",
+      hours: "",
+    };
   },
   methods: {
     getDayMonthYear() {
-      var dayName = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
-      var monName = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
-      var now = new Date
+      var dayName = new Array(
+        "Domingo",
+        "Segunda",
+        "Terça",
+        "Quarta",
+        "Quinta",
+        "Sexta",
+        "Sábado"
+      );
+      var monName = new Array(
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+      );
+      var now = new Date();
 
-      const dayCompleted = (dayName[now.getDay()] + ", " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear())
-      this.dayComplete = dayCompleted
+      const dayCompleted =
+        dayName[now.getDay()] +
+        ", " +
+        now.getDate() +
+        " de " +
+        monName[now.getMonth()] +
+        " de " +
+        now.getFullYear();
+      this.dayComplete = dayCompleted;
     },
     GetTimeToday() {
       var today = new Date();
       var h = today.getHours();
       var m = today.getMinutes();
       var s = today.getSeconds();
-      console.log(h)
-      console.log(m)
-      console.log(s)
+      console.log(h);
+      console.log(m);
+      console.log(s);
 
-
-      h = (h < 10) ? "0" + h : h;
-      m = (m < 10) ? "0" + m : m;
-      s = (s < 10) ? "0" + s : s;
+      h = h < 10 ? "0" + h : h;
+      m = m < 10 ? "0" + m : m;
+      s = s < 10 ? "0" + s : s;
 
       const horas = h + ":" + m + ":" + s;
       this.hours = horas;
 
       console.log(horas);
-
-
-
-
-
     },
-
   },
   mounted() {
-    this.getDayMonthYear()
+    this.getDayMonthYear();
+
     setInterval(() => {
-      this.GetTimeToday()
-    }, 500)
-  }
-
-
+      this.GetTimeToday();
+    }, 500);
+  },
 };
 </script>
-
 
 <style scoped>
 .container-text {
@@ -136,13 +153,16 @@ export default {
 }
 
 .container-Hours {
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   height: 228px;
   width: 896.2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E6E6E6;
+  background-color: #87ceeb;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px  #778899;
 }
 
 .text-hours {
@@ -152,8 +172,18 @@ export default {
 }
 
 .text {
-  color: #696969;
+  color: #778899;
+  font-weight: lighter;
 }
+.container-footer{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+img{
+  margin-top: 4px;
+}
+
 
 @media (max-width: 599px) {
   .text-hours {
@@ -164,6 +194,5 @@ export default {
     width: 300px;
     height: 150px;
   }
-
 }
 </style>

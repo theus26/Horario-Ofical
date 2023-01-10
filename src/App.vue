@@ -10,7 +10,7 @@
 
 <style>
 main{
-  background-color: #E6E6E6;
+  background-color: #DCDCDC;
   font-family: Arial, Helvetica, sans-serif;
 }
 </style>
