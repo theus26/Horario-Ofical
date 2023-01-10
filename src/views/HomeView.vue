@@ -35,7 +35,7 @@
         <div class="container-text">
           <span class="text">Ajude a manter esse site sempre no ar. Faça-nos uma doação de qualquer valor. Muito
             obrigado.</span>
-          <p class="text">Chave PIX: <b>doe@itech.win</b></p>
+          <p class="text">Chave PIX: <b>pp6kp@icloud.com</b></p>
         </div>
         <div class="container-text">
           (<router-link to="/qrCode">Doe via Qr Code</router-link>)
@@ -50,6 +50,10 @@
                 title="Bandeira do Brasil" />
               Brasil (UTC-3)
               {{ dayComplete }}
+            </div>
+            <div class="links">
+             •<a href="http://pcdsh01.on.br">ON</a>
+             •<a href="https://time.gov/">US TIME</a>
             </div>
             ©️ Relogio.cc
           </div>
@@ -160,9 +164,9 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: #87ceeb;
-  color: white;
+  color: black;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px  #778899;
+  box-shadow: 2px 2px 2px #778899;
 }
 
 .text-hours {
@@ -175,13 +179,26 @@ export default {
   color: #778899;
   font-weight: lighter;
 }
-.container-footer{
+
+.container-footer {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-img{
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+img {
   margin-top: 4px;
+}
+
+a {
+  text-decoration: none;
 }
 
 
