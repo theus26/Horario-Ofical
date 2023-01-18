@@ -5,9 +5,9 @@
       <ContainerBox>
         <header>
           <div class="container-text">
-            <h1>Horário Oficial de Brasília</h1>
+            <h1>Hora Oficial de Brasília - BRASIL</h1>
           </div>
-          <hr />
+
         </header>
         <nav>
           <div class="container-text">
@@ -24,13 +24,59 @@
             </div>
           </div>
         </nav>
+
         <div class="container-text">
           <p class="text">
             Hora sincronizada com servidores de horário do observatorio Nacional-RJ
           </p>
           <br />
           <br />
-          <hr />
+
+        </div>
+
+        <div class="container-text">
+          <p class="text color">
+            FUSOS HORÁRIOS DO BRASIL POR ESTADOS E ILHAS:
+          </p>
+
+          <p class="text txt">Estados com o Horário de Brasília (-3:00HS UTC)
+            ALAGOAS, AMAPÁ, BAHIA, CEARÁ, ESPÍRITO SANTO, GOIÁS, MARANHÃO, MINAS GERAIS, PARÁ, PARAÍBA, PARANÁ,
+            PERNAMBUCO, PIAUÍ, RIO DE JANEIRO, RIO GRANDE DO NORTE, RIO GRANDE DO SUL, SÃO PAULO, SERGIPE, SANTA
+            CATARINA E TOCANTINS.
+            Ilhas com Horário de Brasília + 1:00H (-2:00HS UTC)
+            ARQUIPÉLAGO DE SÃO PEDRO E SÃO PAULO, ATOL DAS ROCAS, FERNANDO DE NORONHA, MARTIM VAZ E TRINDADE.
+
+            Estado com Horário de Brasília -2:00HS (-5:00HS UTC)
+            ACRE
+            Estados com Horário de Brasília -1:00H (-4:00HS UTC)
+            AMAZONAS, MATO GROSSO, MATO GROSSO DO SUL, RONDÔNIA E RORAIMA.
+
+            UTC – Coordinated Universal Time ou Tempo Universal Coordenado, refere-se ao fuso horário de 0:00 hora no
+            Meridiano de Greenwich, que serve como referência a todos os outros fusos horários do mundo.
+
+           </p>
+          <br />
+          
+         
+        </div>
+
+
+        <div class="container-text">
+          <p class="text txt">
+            A padronização dos horários foi introduzida em 1º de janeiro de 1914, após publicação do DPL 2.784, de 18 de
+            junho e do decreto 10.546, de 5 de novembro de 1913. Antes, cada lugar sincronizava os relógios conforme o
+            horário solar aparente; havia uma diferença horária de 13 minutos e 54 segundos da então capital federal
+            (até 1960) Rio de Janeiro (c. GMT-02:52:41) a São Paulo (c. GMT-03:06:35) como exemplo – esta que deixou de
+            existir com o estabelecimento do atual Horário de Brasília a ambas capitais e estados homônimos. A
+            determinação, conservação e disseminação da Hora Legal Brasileira (HLB) é competência da Divisão do
+            Serviço da Hora (DSHO), do Observatório Nacional (ON), onde é possível a sincronização horária conforme os
+            relógios exibidos no website da instituição, que por sua vez mantém precisão milimétrica por serem relógios
+            atômicos de césio.
+          </p>
+          <p class="text-p"> Fontes: Wikipedia e Divisão de Serviço da Hora/Observatório Nacional</p>
+          <br />
+          <br />
+
         </div>
         <div class="container-text">
           <span class="text">Ajude a manter esse site sempre no ar. Faça-nos uma doação de qualquer valor. Muito
@@ -38,10 +84,10 @@
           <p class="text">Chave PIX: <b>pp6kp@icloud.com</b></p>
         </div>
         <div class="container-text">
-          (<router-link to="/qrCode">Doe via Qr Code</router-link>)
+          (<router-link to="/qrCode">Quer doar usando Qr Code? Clique aqui.</router-link>)
           <br />
           <br />
-          <hr />
+
         </div>
         <footer>
           <div class="container-text">
@@ -52,8 +98,8 @@
               {{ dayComplete }}
             </div>
             <div class="links">
-             •<a href="http://pcdsh01.on.br">ON</a>
-             •<a href="https://time.gov/">US TIME</a>
+              •<a href="http://pcdsh01.on.br">ON</a>
+              •<a href="https://time.gov/">US TIME</a>
             </div>
             ©️ Relogio.cc
           </div>
@@ -146,6 +192,11 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: DS-DIGIT;
+  src: url("../assets/DS-DIGIT.TTF");
+}
+
 .container-text {
   text-align: center;
 }
@@ -157,22 +208,23 @@ export default {
 }
 
 .container-Hours {
-  border: 1px solid #e6e6e6;
+
   height: 228px;
   width: 896.2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #87ceeb;
+  background-color: white;
   color: black;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px #778899;
+
 }
 
 .text-hours {
   text-align: center;
   font-size: 190px;
   font-weight: 700;
+  font-family: DS-Digit;
 }
 
 .text {
@@ -201,6 +253,20 @@ a {
   text-decoration: none;
 }
 
+.txt {
+  text-align: justify;
+  font-weight: bold;
+}
+
+.text-p {
+  text-align: center;
+  font-weight: bold;
+}
+.color{
+  font-weight: bold;
+  color: black;
+  font-size:large;
+}
 
 @media (max-width: 599px) {
   .text-hours {

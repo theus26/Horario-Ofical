@@ -9,6 +9,7 @@
 </template>
 
 <style>
+
 main{
   background-color: #DCDCDC;
   font-family: Arial, Helvetica, sans-serif;
