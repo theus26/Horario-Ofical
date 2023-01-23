@@ -1,5 +1,4 @@
 <template>
-
   <body @load="GetTimeToday()">
     <main>
       <ContainerBox>
@@ -7,7 +6,6 @@
           <div class="container-text">
             <h1>Hora Oficial de Brasília - BRASIL</h1>
           </div>
-
         </header>
         <nav>
           <div class="container-text">
@@ -27,11 +25,11 @@
 
         <div class="container-text">
           <p class="text">
-            Hora sincronizada com servidores de horário do observatorio Nacional-RJ
+            Hora sincronizada com servidores de horário do observatorio
+            Nacional-RJ
           </p>
           <br />
           <br />
-
         </div>
 
         <div class="container-text">
@@ -39,67 +37,104 @@
             FUSOS HORÁRIOS DO BRASIL POR ESTADOS E ILHAS:
           </p>
 
-          <p class="text txt">Estados com o Horário de Brasília (-3:00HS UTC)
-            ALAGOAS, AMAPÁ, BAHIA, CEARÁ, ESPÍRITO SANTO, GOIÁS, MARANHÃO, MINAS GERAIS, PARÁ, PARAÍBA, PARANÁ,
-            PERNAMBUCO, PIAUÍ, RIO DE JANEIRO, RIO GRANDE DO NORTE, RIO GRANDE DO SUL, SÃO PAULO, SERGIPE, SANTA
-            CATARINA E TOCANTINS.
-            Ilhas com Horário de Brasília + 1:00H (-2:00HS UTC)
-            ARQUIPÉLAGO DE SÃO PEDRO E SÃO PAULO, ATOL DAS ROCAS, FERNANDO DE NORONHA, MARTIM VAZ E TRINDADE.
+          <div class="container-text">
+            <p class="text txt title">
+              Estados com o Horário de Brasília (-3:00HS UTC):
+            </p>
+            <p class="text txt">
+              ALAGOAS, AMAPÁ, BAHIA, CEARÁ, ESPÍRITO SANTO, GOIÁS, MARANHÃO,
+              MINAS GERAIS, PARÁ, PARAÍBA, PARANÁ, PERNAMBUCO, PIAUÍ, RIO DE
+              JANEIRO, RIO GRANDE DO NORTE, RIO GRANDE DO SUL, SÃO PAULO,
+              SERGIPE, SANTA CATARINA E TOCANTINS.
+            </p>
 
-            Estado com Horário de Brasília -2:00HS (-5:00HS UTC)
-            ACRE
-            Estados com Horário de Brasília -1:00H (-4:00HS UTC)
-            AMAZONAS, MATO GROSSO, MATO GROSSO DO SUL, RONDÔNIA E RORAIMA.
+            <p class="text txt title">
+              Ilhas com Horário de Brasília + 1:00H (-2:00HS UTC):
+            </p>
 
-            UTC – Coordinated Universal Time ou Tempo Universal Coordenado, refere-se ao fuso horário de 0:00 hora no
-            Meridiano de Greenwich, que serve como referência a todos os outros fusos horários do mundo.
+            <p class="text txt">
+              ARQUIPÉLAGO DE SÃO PEDRO E SÃO PAULO, ATOL DAS ROCAS, FERNANDO DE
+              NORONHA, MARTIM VAZ E TRINDADE.
+            </p>
 
-           </p>
-          <br />
-          
-         
+            <p class="text txt title">
+              Estado com Horário de Brasília -2:00HS (-5:00HS UTC):
+            </p>
+
+            <p class="text txt">Acre.</p>
+
+            <p class="text txt title">
+              Estados com Horário de Brasília -1:00H (-4:00HS UTC):
+            </p>
+
+            <p class="text txt">
+              AMAZONAS, MATO GROSSO, MATO GROSSO DO SUL, RONDÔNIA E RORAIMA.
+            </p>
+
+            <p class="text txt">
+              UTC – Coordinated Universal Time ou Tempo Universal Coordenado,
+              refere-se ao fuso horário de 0:00 hora no Meridiano de Greenwich,
+              que serve como referência a todos os outros fusos horários do
+              mundo.
+            </p>
+          </div>
         </div>
-
 
         <div class="container-text">
           <p class="text txt">
-            A padronização dos horários foi introduzida em 1º de janeiro de 1914, após publicação do DPL 2.784, de 18 de
-            junho e do decreto 10.546, de 5 de novembro de 1913. Antes, cada lugar sincronizava os relógios conforme o
-            horário solar aparente; havia uma diferença horária de 13 minutos e 54 segundos da então capital federal
-            (até 1960) Rio de Janeiro (c. GMT-02:52:41) a São Paulo (c. GMT-03:06:35) como exemplo – esta que deixou de
-            existir com o estabelecimento do atual Horário de Brasília a ambas capitais e estados homônimos. A
-            determinação, conservação e disseminação da Hora Legal Brasileira (HLB) é competência da Divisão do
-            Serviço da Hora (DSHO), do Observatório Nacional (ON), onde é possível a sincronização horária conforme os
-            relógios exibidos no website da instituição, que por sua vez mantém precisão milimétrica por serem relógios
-            atômicos de césio.
+            A padronização dos horários foi introduzida em 1º de janeiro de
+            1914, após publicação do DPL 2.784, de 18 de junho e do decreto
+            10.546, de 5 de novembro de 1913. Antes, cada lugar sincronizava os
+            relógios conforme o horário solar aparente; havia uma diferença
+            horária de 13 minutos e 54 segundos da então capital federal (até
+            1960) Rio de Janeiro (c. GMT-02:52:41) a São Paulo (c. GMT-03:06:35)
+            como exemplo – esta que deixou de existir com o estabelecimento do
+            atual Horário de Brasília a ambas capitais e estados homônimos. A
+            determinação, conservação e disseminação da Hora Legal Brasileira
+            (HLB) é competência da Divisão do Serviço da Hora (DSHO), do
+            Observatório Nacional (ON), onde é possível a sincronização horária
+            conforme os relógios exibidos no website da instituição, que por sua
+            vez mantém precisão milimétrica por serem relógios atômicos de
+            césio.
           </p>
-          <p class="text-p"> Fontes: Wikipedia e Divisão de Serviço da Hora/Observatório Nacional</p>
+          <p class="text-p">
+            Fontes: Wikipedia e Divisão de Serviço da Hora/Observatório Nacional
+          </p>
           <br />
           <br />
-
         </div>
         <div class="container-text">
-          <span class="text">Ajude a manter esse site sempre no ar. Faça-nos uma doação de qualquer valor. Muito
-            obrigado.</span>
-          <p class="text">Chave PIX: <b>pp6kp@icloud.com</b></p>
+          <span class="text"
+            >Quer nos ajudar a manter o site? Ajude-nos doando qualquer valor
+            pelo PIX:<br> <br><b>e-mail: pp6kp@hotmail.com</b> </span
+          >
+          <p class="text">Muito Obrigado!</p>
         </div>
         <div class="container-text">
-          (<router-link to="/qrCode">Quer doar usando Qr Code? Clique aqui.</router-link>)
+          (<router-link to="/qrCode"
+            >Quer doar usando Qr Code? Clique aqui.</router-link
+          >)
           <br />
           <br />
-
         </div>
         <footer>
           <div class="container-text">
             <div class="container-footer">
-              <img src="../assets/brasil.png" width="15" height="10" alt="Bandeira do Brasil"
-                title="Bandeira do Brasil" />
+              <img
+                src="../assets/brasil.png"
+                width="15"
+                height="10"
+                alt="Bandeira do Brasil"
+                title="Bandeira do Brasil"
+              />
               Brasil (UTC-3)
               {{ dayComplete }}
             </div>
             <div class="links">
-              •<a href="http://pcdsh01.on.br">ON</a>
-              •<a href="https://time.gov/">US TIME</a>
+              •<a href="http://pcdsh01.on.br">ON</a> •<a
+                href="https://time.gov/"
+                >US TIME</a
+              >
             </div>
             ©️ Relogio.cc
           </div>
@@ -208,7 +243,6 @@ export default {
 }
 
 .container-Hours {
-
   height: 228px;
   width: 896.2px;
   display: flex;
@@ -217,7 +251,6 @@ export default {
   background-color: white;
   color: black;
   border-radius: 10px;
-
 }
 
 .text-hours {
@@ -262,10 +295,16 @@ a {
   text-align: center;
   font-weight: bold;
 }
-.color{
+
+.color {
   font-weight: bold;
   color: black;
-  font-size:large;
+  font-size: large;
+}
+
+.title {
+  color: black;
+  font-size: medium;
 }
 
 @media (max-width: 599px) {
