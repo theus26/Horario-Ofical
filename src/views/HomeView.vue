@@ -25,7 +25,7 @@
 
         <div class="container-text">
           <p class="text">
-            Hora sincronizada com servidores de horário do observatorio
+            Hora sincronizada com servidores de horário do Observatorio
             Nacional-RJ
           </p>
           <br />
@@ -148,7 +148,8 @@
 // @ is an alias to /src
 
 import ContainerBox from "@/components/ContainerBox.vue";
-
+import moment from 'moment'
+moment.locale('pt-br');
 export default {
   name: "HomeView",
   components: {
@@ -198,22 +199,23 @@ export default {
       this.dayComplete = dayCompleted;
     },
     GetTimeToday() {
-      var today = new Date();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      console.log(h);
-      console.log(m);
-      console.log(s);
 
-      h = h < 10 ? "0" + h : h;
-      m = m < 10 ? "0" + m : m;
-      s = s < 10 ? "0" + s : s;
+      var date = moment().format('LTS');
+      this.hours = date
+      // var today = new Date();
+      // var h = today.getHours();
+      // var m = today.getMinutes();
+      // var s = today.getSeconds();
+    
 
-      const horas = h + ":" + m + ":" + s;
-      this.hours = horas;
+      // h = h < 10 ? "0" + h : h;
+      // m = m < 10 ? "0" + m : m;
+      // s = s < 10 ? "0" + s : s;
 
-      console.log(horas);
+      // const horas = h + ":" + m + ":" + s;
+      // //this.hours = horas;
+
+  
     },
   },
   mounted() {
@@ -222,6 +224,7 @@ export default {
     setInterval(() => {
       this.GetTimeToday();
     }, 500);
+
   },
 };
 </script>
