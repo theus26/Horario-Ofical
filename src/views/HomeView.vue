@@ -17,7 +17,7 @@
           <div class="corner">
             <div class="container-wrap">
               <div class="container-Hours">
-                <p class="text-hours" id="clock">{{ hours }}</p>
+                <p class="text-hours" id="clock">{{ horas }}: {{ minutes }}: {{ second }}</p>
               </div>
             </div>
           </div>
@@ -104,37 +104,25 @@
           <br />
         </div>
         <div class="container-text">
-          <span class="text"
-            >Quer nos ajudar a manter o site? Ajude-nos doando qualquer valor
-            pelo PIX:<br> <br><b>e-mail: pp6kp@hotmail.com</b> </span
-          >
+          <span class="text">Quer nos ajudar a manter o site? Ajude-nos doando qualquer valor
+            pelo PIX:<br> <br><b>e-mail: pp6kp@hotmail.com</b> </span>
           <p class="text">Muito Obrigado!</p>
         </div>
         <div class="container-text">
-          (<router-link to="/qrCode"
-            >Quer doar usando Qr Code? Clique aqui.</router-link
-          >)
+          (<router-link to="/qrCode">Quer doar usando Qr Code? Clique aqui.</router-link>)
           <br />
           <br />
         </div>
         <footer>
           <div class="container-text">
             <div class="container-footer">
-              <img
-                src="../assets/brasil.png"
-                width="15"
-                height="10"
-                alt="Bandeira do Brasil"
-                title="Bandeira do Brasil"
-              />
+              <img src="../assets/brasil.png" width="15" height="10" alt="Bandeira do Brasil"
+                title="Bandeira do Brasil" />
               Brasil (UTC-3)
               {{ dayComplete }}
             </div>
             <div class="links">
-              •<a href="http://pcdsh01.on.br">ON</a> •<a
-                href="https://time.gov/"
-                >US TIME</a
-              >
+              •<a href="http://pcdsh01.on.br">ON</a> •<a href="https://time.gov/">US TIME</a>
             </div>
             ©️ Relogio.cc
           </div>
@@ -148,8 +136,7 @@
 // @ is an alias to /src
 
 import ContainerBox from "@/components/ContainerBox.vue";
-import moment from 'moment'
-moment.locale('pt-br');
+
 export default {
   name: "HomeView",
   components: {
@@ -159,8 +146,13 @@ export default {
     return {
       dayComplete: "",
       hours: "",
+      second: '',
+      minutes: '',
+      horas: '',
+      zero: ''
     };
   },
+
   methods: {
     getDayMonthYear() {
       var dayName = new Array(
@@ -198,43 +190,39 @@ export default {
         now.getFullYear();
       this.dayComplete = dayCompleted;
     },
-    GetTimeToday() {
 
-      var date = moment().format('LTS');
-      this.hours = date
-      // var today = new Date();
-      // var h = today.getHours();
-      // var m = today.getMinutes();
-      // var s = today.getSeconds();
-    
+    async getServerTime() {
+      fetch('https://worldtimeapi.org/api/ip')
+        .then(response => response.json())
+        .then(data => {
+          // Extrai a data e hora do objeto de resposta
+          const dateTimeString = data.datetime;
+          const dateTime = new Date(dateTimeString);
 
-      // h = h < 10 ? "0" + h : h;
-      // m = m < 10 ? "0" + m : m;
-      // s = s < 10 ? "0" + s : s;
+          const H = dateTime.getHours();
+          const M = dateTime.getMinutes();
+          const S = dateTime.getSeconds();
+          this.horas = H < 10 ? "0" + H : H
+          this.minutes = M < 10 ? "0" + M : M
+          this.second = S < 10 ? "0" + S : S;
 
-      // const horas = h + ":" + m + ":" + s;
-      // //this.hours = horas;
+        })
+        .catch(error => console.error('Erro ao obter hora da internet:', error));
 
-  
-    },
+    }
+
+
   },
   mounted() {
-    this.getDayMonthYear();
 
-    setInterval(() => {
-      this.GetTimeToday();
-    }, 500);
+    this.getServerTime()
+    setInterval(this.getServerTime, 500)
 
-  },
+  }
 };
 </script>
 
 <style scoped>
-@font-face {
-  font-family: DS-DIGIT;
-  src: url("../assets/DS-DIGIT.TTF");
-}
-
 .container-text {
   text-align: center;
 }
