@@ -17,7 +17,7 @@
           <div class="corner">
             <div class="container-wrap">
               <div class="container-Hours">
-                <p class="text-hours" id="clock">{{ horas }}: {{ minutes }}: {{ second }}</p>
+                <p class="text-hours" id="clock">{{ horas }}:{{ minutes }}:{{ second }}</p>
               </div>
             </div>
           </div>
@@ -218,6 +218,8 @@ export default {
     this.getServerTime()
     setInterval(this.getServerTime, 500)
 
+    this.getDayMonthYear()
+
   }
 };
 </script>
@@ -248,7 +250,7 @@ export default {
   text-align: center;
   font-size: 190px;
   font-weight: 700;
-  font-family: DS-Digit;
+  
 }
 
 .text {
