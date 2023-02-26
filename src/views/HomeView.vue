@@ -250,6 +250,7 @@ export default {
   text-align: center;
   font-size: 190px;
   font-weight: 700;
+  font-family: DS-Digit;
   
 }
 
