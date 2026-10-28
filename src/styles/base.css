@@ -1,0 +1,119 @@
+:root {
+  color-scheme: light;
+  background: #e6e6e6;
+  color: #000000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: #e6e6e6;
+  color: #000000;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+.canvas {
+  min-height: 100vh;
+  padding: 2.25rem 1rem 3rem;
+  background: #e6e6e6;
+}
+
+.sheet {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 2.15rem 2.4rem 1.8rem;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 22px;
+}
+
+.sheet h1,
+.sheet h2 {
+  text-align: center;
+}
+
+h1 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(2rem, 4.6vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.section {
+  margin-top: 2.4rem;
+}
+
+.rule {
+  height: 0;
+  margin: 1.2rem 0;
+  border: 0;
+  border-top: 1px solid #d0d0d0;
+}
+
+@media (max-width: 640px) {
+  .canvas {
+    padding: 0.85rem 0.7rem 1.6rem;
+  }
+
+  .sheet {
+    padding: 1.35rem 1rem 1.25rem;
+    border-radius: 16px;
+  }
+}

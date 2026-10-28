@@ -1,9 +1,12 @@
-## Pagina Estatica Para mostrar as Horas em tempo real.
+## Hora oficial de Brasília
 
-> Esse site foi feito se baseando no site do horário oficial de brasília, com o intuito de aprender e praticar conhecimentos em JavaScript, Utilizando o Framework Vue.JS.
+Relógio em tempo real no fuso de Brasília (`America/Sao_Paulo`, UTC−3), feito com Vue 3, TypeScript e Vite.
 
->É obtida a hora atráves do servidor de horas que disponibiliza, a hora exata de brasília.
+A hora exibida sempre passa pelo fuso de Brasília, mesmo que o visitante esteja em outro fuso. O relógio do aparelho avança os segundos. Quando a rede responde, um ajuste único alinha esse relógio com a hora da internet e a sincronização se repete a cada dez minutos.
 
->> Foi feito tanto para Web, quanto pode ser visto pelos celulares, totalmente responsivo e se adapta a maioria das telas.
-
-
+```bash
+npm install
+npm run dev
+npm test
+npm run build
+```
